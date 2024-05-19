@@ -3,7 +3,7 @@ import { Link } from "expo-router"
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const Home = () => {
+const Scan = () => {
     return (
         <SafeAreaView className=''>
             <ScrollView>
@@ -22,6 +22,8 @@ const Home = () => {
                     </View>
 
                     <Text className='text-slate-600 font-bold text-2xl text-center m-6'>Scan, Pay & Enjoy!</Text>
+
+                    <Link href={'/restaurants'} className='w-40 self-center text-center text-white border border-white p-2 rounded-sm'>Go to Buy</Link>
                    
                 </View>
                 
@@ -30,4 +32,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Scan

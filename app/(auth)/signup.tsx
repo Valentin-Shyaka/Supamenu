@@ -35,7 +35,7 @@ const Signup = () => {
           </View>
 
         </View>
-        <Link href={'/home'} className='shadow-lg shadoe-black self-center mt-6 p-4 w-full  bg-[#e38a3d] rounded-lg text-center'><Text className='text-white text-center font-bold'>Sign In</Text></Link>
+        <Link href={'/scan'} className='shadow-lg shadoe-black self-center mt-6 p-4 w-full  bg-[#e38a3d] rounded-lg text-center'><Text className='text-white text-center font-bold'>Sign In</Text></Link>
         <View>
             
             <Text className='text-center font-bold text-slate-400 mt-4'>OR</Text>
