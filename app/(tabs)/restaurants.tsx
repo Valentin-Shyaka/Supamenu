@@ -8,7 +8,8 @@ import {
     SafeAreaInsetsContext,
     useSafeAreaInsets,
   } from 'react-native-safe-area-context';
-
+  import image from '../../images/download.jpeg'
+  import image2 from '../../images/filini.jpeg'
 const Restaurants = () => {
     return (
         <SafeAreaView className=''>
@@ -28,13 +29,27 @@ const Restaurants = () => {
                     <View className=' w-full h-full p-4'>
                         <Text className=' text-orange-400 mb-4'>Nearby Restaurant</Text>
 
-                        <View className='w-full bg-white h-20 rounded-lg'>
-                        <Image
-                            source={{
-                            uri: 'https://reactnative.dev/img/tiny_logo.png',
-                             }}
-                        />
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
                         </View>
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
+                        </View>
+                        
                     </View>
                 </View>
                
