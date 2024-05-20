@@ -11,7 +11,7 @@ const Notifications = () => {
             <ScrollView>
                
 
-                <View className='w-screen h-screen  bg-[#f1efed]'>
+                <View className='w-screen h-screen  bg-[#fdfcfb]'>
                     <Image source={image} alt="" className=" w-full rounded-b-3xl h-72" />
                     <View className=' p-2 w-full'>
                         <Text className='text-xl font-bold '>Sushi n' chips / Dessert</Text>
