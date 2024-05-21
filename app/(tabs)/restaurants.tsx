@@ -16,9 +16,9 @@ const Restaurants = () => {
             <ScrollView>
                
 
-                <View className='w-screen h-screen bg-[#eceae9]'>
+                <View className=' w-screen h-screen bg-[#f4f3f2]'>
                    
-                    <View className=' h-16 w-full bg-white top-0 p-2 border-b border-b-slate-300 z-10  '>
+                    <View className='fixed h-16 w-full bg-white top-0 p-2 border-b border-b-slate-300 z-10  '>
                         <View className=' flex flex-row '>
                             <View className='bg-[#eceae9] p-2 items-center self-center w-12 rounded-lg '>
                                 <AntDesign name="left" size={24} color="orange" />
@@ -49,6 +49,47 @@ const Restaurants = () => {
                             </View>
                             <AntDesign name="staro" size={20} color="orange" />
                         </View>
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
+                        </View>
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
+                        </View>
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
+                        </View>
+                        <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
+                            <View className='h-full w-20 rounded-md'>
+                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                            </View>
+                            <View className='justify-center text-center ml-4'>
+                                <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
+                                <Text className='text-slate-400 text-sm font-bold '>World,African,Pizzeria,Coffee </Text>
+                            </View>
+                            <AntDesign name="staro" size={20} color="orange" />
+                        </View>
+                        
                         
                     </View>
                 </View>
