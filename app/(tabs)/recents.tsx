@@ -4,6 +4,7 @@ import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import image from '../../images/burger.jpg'
+import image2 from '../../images/pizza.jpg'
 import { Image } from "react-native";
 
 const Recents = () => {
@@ -63,7 +64,13 @@ const Recents = () => {
 
                             </View>
                             <View className='relative bg-white w-40 mb-1 p-4 h-[210px] shadow-sm shadow-black rounded-md'>
-                                <Image source={image} alt="" className="h-32 w-full rounded-t-md" />
+                                <Image source={image2} alt="" className="h-32 w-full rounded-t-md" />
+                                <Text className='text-sm mt-2 ml-2 font-bold '>cheese Burger</Text>
+                                <Text className='absolute text-orange-400 font-bold  right-2 bottom-1'>$6.99</Text>
+
+                            </View>
+                            <View className='relative bg-white w-40 mb-1 p-4 h-[210px] shadow-sm shadow-black rounded-md'>
+                                <Image source={image2} alt="" className="h-32 w-full rounded-t-md" />
                                 <Text className='text-sm mt-2 ml-2 font-bold '>cheese Burger</Text>
                                 <Text className='absolute text-orange-400 font-bold  right-2 bottom-1'>$6.99</Text>
 

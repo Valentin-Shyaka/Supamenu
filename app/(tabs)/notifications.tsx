@@ -13,7 +13,7 @@ const Notifications = () => {
             <ScrollView>
                
 
-                <View className='w-screen h-screen  bg-[#fdfcfb] '>
+                <View className='w-screen  bg-[#fdfcfb] '>
                     <Image source={image} alt="" className=" w-full rounded-b-3xl h-72" />
                     <View className=' p-2 w-full'>
                         <Text className='text-xl font-bold '>Sushi n' chips / Dessert</Text>
@@ -44,14 +44,24 @@ const Notifications = () => {
                             <Feather name="check-circle" size={24} color="orange" className='ml-6' />
                             </View>
                         </View>
-                        <View className='relative flex flex-row items-center'>
+                        <View className='relative flex flex-row items-center mb-4'>
                             <Image source={image2} alt="" className=" w-14 rounded-b-3xl h-14 rounded-md" />
-                            <Text className='font-bold text-md ml-4 '>Shrimp dessert</Text>
+                            <Text className='font-bold text-md ml-4 '>Egg dessert</Text>
                             <Text className='absolute right-16 font-bold text-slate-400 ml-10'>+ $2.46</Text>
                             <View className='absolute right-4'>
                             <Feather name="check-circle" size={24} color="orange" className='ml-6' />
                             </View>
                         </View>
+                        <View className='relative flex flex-row items-center mb-4'>
+                            <Image source={image2} alt="" className=" w-14 rounded-b-3xl h-14 rounded-md" />
+                            <Text className='font-bold text-md ml-4 '>Egg dessert</Text>
+                            <Text className='absolute right-16 font-bold text-slate-400 ml-10'>+ $2.46</Text>
+                            <View className='absolute right-4'>
+                            <Feather name="check-circle" size={24} color="orange" className='ml-6' />
+                            </View>
+                        </View>
+                        
+                        
                         
                     </View>
                 </View>

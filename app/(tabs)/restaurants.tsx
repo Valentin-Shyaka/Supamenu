@@ -16,7 +16,7 @@ const Restaurants = () => {
             <ScrollView>
                
 
-                <View className=' w-screen h-screen bg-[#f4f3f2]'>
+                <View className=' w-screen bg-[#f4f3f2]'>
                    
                     <View className='fixed h-16 w-full bg-white top-0 p-2 border-b border-b-slate-300 z-10  '>
                         <View className=' flex flex-row '>
