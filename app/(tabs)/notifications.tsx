@@ -6,7 +6,7 @@ import image2 from '../../images/banjo.jpg'
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-
+import { Entypo } from "@expo/vector-icons"
 const Notifications = () => {
     return (
         <SafeAreaView className=''>
@@ -29,7 +29,15 @@ const Notifications = () => {
                         </View>
                         <View className='mt-2 flex flex-row w-full justify-between'>
                             <Text className='mt-2 text-bold text-xl font-bold  '><Text className='text-orange-600'>$</Text>4.56</Text>
-                            <TouchableOpacity className=' bg-[#d5843d] p-2 w-20 h-10 rounded-3xl  '><Text className='text-center text-white font-bold '>Buy</Text></TouchableOpacity>
+                            <View className='flex flex-row gap-x-2'>
+                            <TouchableOpacity className=' bg-[#3dd5a2] px-4 py-2  rounded-3xl flex flex-row items-center '>
+                                <Entypo name="plus" size={24} color="white" />
+                                <Text className=' text-white font-bold '>Add to cart</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity className=' bg-[#d5843d] px-6 py-2 items-center rounded-3xl  '>
+                                <Text className='text-center text-white font-bold '>Buy</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                     <Text className='p-2 text-slate-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit.doloremque animi consequatur nobis quasi atque eligendi modi laborum odit rem.</Text>

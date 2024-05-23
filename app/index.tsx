@@ -1,9 +1,8 @@
-import {Text,SafeAreaView,ScrollView,View,TouchableOpacity} from "react-native"
+import {Text,ScrollView,SafeAreaView,View,TouchableOpacity} from "react-native"
 import { Link } from "expo-router"
-
 const App = () => {
     return (
-        <SafeAreaView className=''>
+        <SafeAreaView>
             <ScrollView>
                 <Link href={'/login'}>
 
