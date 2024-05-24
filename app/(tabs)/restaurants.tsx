@@ -51,7 +51,7 @@ const Restaurants = () => {
                         </View>
                         <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
                             <View className='h-full w-20 rounded-md'>
-                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                                <Image source={image} alt="" className="h-full w-full rounded-md" />
                             </View>
                             <View className='justify-center text-center ml-4'>
                                 <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>
@@ -71,7 +71,7 @@ const Restaurants = () => {
                         </View>
                         <View className='w-full bg-white h-20 rounded-lg flex flex-row p-2 mb-4'>
                             <View className='h-full w-20 rounded-md'>
-                                <Image source={image2} alt="" className="h-full w-full rounded-md" />
+                                <Image source={image} alt="" className="h-full w-full rounded-md" />
                             </View>
                             <View className='justify-center text-center ml-4'>
                                 <Text className=' text-lg font-bold '>Pili Pili (Rwanda)</Text>

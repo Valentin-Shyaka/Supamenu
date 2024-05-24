@@ -72,6 +72,21 @@ const TabsLayout = () => {
             ),
           }}
         />
+        <Tabs.Screen
+          name="cardPayment"
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View className="items-center justify-center gap-22">
+                <AntDesign
+                  name="wallet"
+                  size={24}
+                  color={focused ? "#f7941d" : "#484848"}
+                />
+              </View>
+            ),
+          }}
+        />
       </Tabs>
     </>
   );

@@ -7,6 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Entypo } from "@expo/vector-icons"
+import { router } from "expo-router"
 const Notifications = () => {
     return (
         <SafeAreaView className=''>
@@ -32,10 +33,12 @@ const Notifications = () => {
                             <View className='flex flex-row gap-x-2'>
                             <TouchableOpacity className=' bg-[#3dd5a2] px-4 py-2  rounded-3xl flex flex-row items-center '>
                                 <Entypo name="plus" size={24} color="white" />
-                                <Text className=' text-white font-bold '>Add to cart</Text>
+                                <TouchableOpacity onPress={()=>{router.push('/cart')}}>
+                                    <Text className=' text-white font-bold '>Add to cart</Text>
+                                </TouchableOpacity>
                             </TouchableOpacity>
-                            <TouchableOpacity className=' bg-[#d5843d] px-6 py-2 items-center rounded-3xl  '>
-                                <Text className='text-center text-white font-bold '>Buy</Text>
+                                <TouchableOpacity onPress={()=>{router.push('/cardPayment')}} className=' bg-[#d5843d] px-6 py-2 items-center rounded-3xl  '>
+                                    <Text className='text-center text-white font-bold '>Buy</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -57,7 +60,7 @@ const Notifications = () => {
                             <Text className='font-bold text-md ml-4 '>Egg dessert</Text>
                             <Text className='absolute right-16 font-bold text-slate-400 ml-10'>+ $2.46</Text>
                             <View className='absolute right-4'>
-                            <Feather name="check-circle" size={24} color="orange" className='ml-6' />
+                            <Entypo name="circle" size={24} color="black" />
                             </View>
                         </View>
                         <View className='relative flex flex-row items-center mb-4'>
@@ -65,7 +68,7 @@ const Notifications = () => {
                             <Text className='font-bold text-md ml-4 '>Egg dessert</Text>
                             <Text className='absolute right-16 font-bold text-slate-400 ml-10'>+ $2.46</Text>
                             <View className='absolute right-4'>
-                            <Feather name="check-circle" size={24} color="orange" className='ml-6' />
+                            <Entypo name="circle" size={24} color="black" />
                             </View>
                         </View>
                         

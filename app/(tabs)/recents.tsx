@@ -37,7 +37,7 @@ const Recents = () => {
                     </View>
                     <View className='flex flex-row w-full overflow-scroll mt-2 justify-between'>
 
-                    <ScrollView horizontal={true} >
+                    <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} >
                         
                         <View className='p-2 flex flex-row bg-[#f2893e] rounded-md justify-center items-center mr-2'>
                             <Ionicons name="fast-food-outline" size={24} color="white" />
@@ -66,7 +66,7 @@ const Recents = () => {
                         <Text className='text-orange-400 font-bold '>see all</Text>
                     </View>
                     
-                        <ScrollView horizontal={true} className="gap-x-2 py-4">
+                        <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} className="gap-x-2 py-4">
                             <View className='relative bg-white w-40 mb-1 p-4 h-[210px] shadow-sm shadow-black rounded-md'>
                                 <Image source={image} alt="" className="h-32 w-full rounded-t-md" />
                                 <Text className='text-sm mt-2 ml-2 font-bold '>cheese Burger</Text>
@@ -89,7 +89,7 @@ const Recents = () => {
                         <View className='mt-2'>
                             <Text className='text-lg font-bold '>Most Popular Food </Text>
 
-                            <ScrollView horizontal={true} className='flex flex-row w-full mt-2 gap-x-2 py-4 '>
+                            <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} className='flex flex-row w-full mt-2 gap-x-2 py-4 '>
                                 <View>
                                 <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
                                     <Image source={image3} alt="" className="h-full w-full rounded-full" />
