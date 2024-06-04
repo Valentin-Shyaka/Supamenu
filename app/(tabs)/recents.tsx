@@ -1,4 +1,4 @@
-import {Text,Button,SafeAreaView,ScrollView,DrawerLayoutAndroid,View, TextInput} from "react-native"
+import {Text,Button,SafeAreaView,ScrollView,DrawerLayoutAndroid,View, TextInput, Pressable} from "react-native"
 import { Link } from "expo-router"
 import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -47,6 +47,7 @@ const Recents = () => {
 
                     <View className=' h-20  flex justify-between flex-row items-center'>
                         <FontAwesome6 name="bars-staggered" size={24} color="black" onPress={() =>drawer.current?.openDrawer()} />
+                        <Text className='font-bold text-lg'>Hello <Text className='font-light text-orange-600'>@Lantern</Text> </Text>
                         <FontAwesome5 name="user-circle" size={32} color="black" />
 
                     </View>
@@ -85,8 +86,15 @@ const Recents = () => {
                     </ScrollView>
 
                     </View>
-                    <View>
-                        <Image source={image} alt="" className="h-32 w-full rounded-t-md" />
+                    <View className=' relative mt-4'>
+                        <Image source={image} alt="" className="h-52 w-full rounded-t-md rounded-lg " />
+                        <View className='absolute justify-center p-6 bg-black h-full w-full opacity-80 rounded-lg'>
+                            <Text className='text-xl font-bold text-white'>For <Text className='text-orange-600'>PRIDE</Text> month</Text>
+                            <Text className='text-xl font-bold text-white'>Discount up to  <Text className='text-orange-600'>35%</Text></Text>
+                            <Pressable className='bg-orange-600 w-40 rounded-lg p-2 mt-4'>
+                                <Text className='text-center font-bold text-white'>Explore</Text>
+                            </Pressable>
+                        </View>
                     </View>
 
                     <View className='mt-4 flex flex-row justify-between items-center'>
@@ -119,10 +127,10 @@ const Recents = () => {
 
                             <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} className='flex flex-row w-full mt-2 gap-x-2 py-4 '>
                                 <View>
-                                <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
-                                    <Image source={image3} alt="" className="h-full w-full rounded-full" />
-                                </View>
-                                <Text className='text-center font-bold text-slate-500'>Pizza</Text>
+                                    <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
+                                        <Image source={image3} alt="" className="h-full w-full rounded-full" />
+                                    </View>
+                                    <Text className='text-center font-bold text-slate-500'>Pizza</Text>
                                 </View>
                                 <View>
                                 <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
@@ -145,7 +153,42 @@ const Recents = () => {
                             </ScrollView>
                         </View>
 
+                        <View className='mt-2 '>
+                            <Text className='text-lg font-bold '>Delivering</Text>
+                            <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} className='flex flex-row w-full h-40 mt-2 gap-x-2 py-4 '>
+                                <View className='relative shadow-sm shadow-black'>
+                                    <Image source={image2} alt="" className="h-32 w-32 rounded-md" />
+                                    <View className='absolute h-full w-full rounded-md'>
+                                        <View className=' absolute right-2 top-2 bg-[#ffffff] h-6 w-16 rounded-sm '>
+                                            <Text className='font-bold text-center'>In stock</Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <View className='relative shadow-sm shadow-black'>
+                                    <Image source={image} alt="" className="h-32 w-32 rounded-md" />
+                                    <View className='absolute h-full w-full rounded-md'>
+                                        <View className=' absolute right-2 top-2 bg-[#ffffff] h-6 w-16 rounded-sm '>
+                                            <Text className='font-bold text-center'>In stock</Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <View className='relative shadow-sm shadow-black'>
+                                    <Image source={image3} alt="" className="h-32 w-32 rounded-md" />
+                                    <View className='absolute h-full w-full rounded-md'>
+                                        <View className=' absolute right-2 top-2 bg-[#ffffff] h-6 w-16 rounded-sm '>
+                                            <Text className='font-bold text-center'>In stock</Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                            </ScrollView>
+                        </View>
+
                     </View>
+
+                   
                    
                     
                 

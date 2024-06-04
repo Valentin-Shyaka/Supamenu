@@ -3,6 +3,7 @@ import { Link } from "expo-router"
 import { Image } from "react-native"
 import image from '../../images/menu.jpg'
 import image2 from '../../images/banjo.jpg'
+import image3 from '../../images/plate.jpeg'
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -43,6 +44,38 @@ const Notifications = () => {
                             </View>
                         </View>
                     </View>
+
+                    <View className='mt-2 p-2'>
+                            <Text className='text-lg font-bold '>Ingredients </Text>
+
+                            <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} className='flex flex-row w-full mt-2 gap-x-2 py-4 '>
+                                <View>
+                                    <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
+                                        <Image source={image3} alt="" className="h-full w-full rounded-full" />
+                                    </View>
+                                    <Text className='text-center font-bold text-slate-500'>Sushi</Text>
+                                </View>
+                                <View>
+                                <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
+                                    <Image source={image} alt="" className="h-full w-full rounded-full" />
+                                </View>
+                                <Text className='text-center font-bold text-slate-500'>Rice</Text>
+                                </View>
+                                <View>
+                                <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
+                                    <Image source={image2} alt="" className="h-full w-full rounded-full" />
+                                </View>
+                                <Text className='text-center font-bold text-slate-500'>Ginger</Text>
+                                </View>
+                                <View>
+                                <View className=' p-2 mb-1 w-20 h-20 bg-white shadow-sm shadow-black rounded-full'>
+                                    <Image source={image3} alt="" className="h-full w-full rounded-full" />
+                                </View>
+                                <Text className='text-center font-bold text-slate-500'>Vinegar</Text>
+                                </View>
+                            </ScrollView>
+                        </View>
+
                     <Text className='p-2 text-slate-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit.doloremque animi consequatur nobis quasi atque eligendi modi laborum odit rem.</Text>
                     <Text className='p-2 font-bold text-lg'>Choice of Addon</Text>
 
