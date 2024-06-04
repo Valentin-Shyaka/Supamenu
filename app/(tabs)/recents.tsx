@@ -1,4 +1,4 @@
-import {Text,SafeAreaView,ScrollView,View,TouchableOpacity, TextInput} from "react-native"
+import {Text,Button,SafeAreaView,ScrollView,DrawerLayoutAndroid,View, TextInput} from "react-native"
 import { Link } from "expo-router"
 import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -10,18 +10,43 @@ import { Image } from "react-native";
 import { FlatList } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
+import { useRef,useState } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+   
 
 const Recents = () => {
+    const drawer = useRef<DrawerLayoutAndroid>(null);
+
+    const navigationView = () => (
+        <View >
+          <Text >I'm in the Drawer!</Text>
+          <Button
+            title="Close drawer"
+            onPress={() => drawer.current?.closeDrawer()}
+          />
+        </View>
+    )
     return (
         <SafeAreaView className=''>
             <ScrollView>
-               
+            
 
                 <View className='w-screen p-4  bg-[#ffffff]'>
+
+                <DrawerLayoutAndroid
+                    ref={drawer}
+                    drawerWidth={300}
+                   
+                    drawerBackgroundColor={'black'}
+                    drawerPosition={'left'}
+                    renderNavigationView={navigationView}
+                    >
+                
+                </DrawerLayoutAndroid>
+
                     <View className=' h-20  flex justify-between flex-row items-center'>
-                        <FontAwesome6 name="bars-staggered" size={24} color="black" />
+                        <FontAwesome6 name="bars-staggered" size={24} color="black" onPress={() =>drawer.current?.openDrawer()} />
                         <FontAwesome5 name="user-circle" size={32} color="black" />
 
                     </View>

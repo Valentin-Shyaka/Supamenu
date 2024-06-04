@@ -1,18 +1,22 @@
-import {Text,ScrollView,SafeAreaView,View,TouchableOpacity, StatusBar} from "react-native"
+import {Text,ScrollView,SafeAreaView,View,Pressable, StatusBar, Modal} from "react-native"
 import { Link } from "expo-router"
+import { AntDesign } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Zocial } from "@expo/vector-icons";
 import { Entypo } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
+import { useState } from "react";
 const App = () => {
+    const [isModalActive,setIsModalActive]= useState(false)
     return (
         <SafeAreaView>
             <ScrollView>
               
                 <StatusBar backgroundColor={'white'} className=''/>
-                <View className='relative w-screen h-screen p-6 '>
+                <View className={isModalActive ?`relative w-screen h-screen p-6 opacity-60 `:`relative w-screen h-screen p-6`}>
                     <View className='w-full h-48  border border-slate-300 mt-2 rounded-lg p-4 bg-black'>
             
                         <Fontisto name="visa" size={24} color="gold" />
@@ -64,14 +68,38 @@ const App = () => {
 
                         </View>
 
-                        <Text className='bg-[#ef943e] p-2 h-10 w-full text-center text-white font-bold mt-4 rounded-lg'>Pay now</Text>
-
+                        <Text className='bg-[#ef943e] p-2 h-10 w-full text-center text-white font-bold mt-4 rounded-lg' onPress={()=>{setIsModalActive(!isModalActive)}}>
+                        <Text >Pay now</Text>
+                        </Text>
                         
                         
 
                     </View>
                         
                 </View>
+                <Modal
+                    animationType="fade"
+                    transparent={true}
+                    visible={isModalActive}
+                    onRequestClose={() => {
+                    setIsModalActive(!isModalActive);
+                    }}
+                    >
+                    <View className='p-4 w-full h-screen justify-center ' >
+                    <View  className='bg-white rounded-lg p-4 '>
+                        
+                        <Pressable onPress={()=>{ setIsModalActive(!isModalActive)} }className='absolute right-2 top-2'>
+                            <AntDesign name="close" size={24} color="black" />
+                        </Pressable>
+                        <Text className=' font-bold text-md text-center'>Your Payment was processed</Text>
+                        <View className='self-center mt-4'>
+                            <Feather name="check-circle" size={40} color="green" />
+                        </View>
+                        
+                        
+                    </View>
+                    </View>
+                </Modal>
                
             </ScrollView>
         </SafeAreaView>
