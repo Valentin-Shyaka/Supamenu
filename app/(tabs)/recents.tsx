@@ -85,6 +85,9 @@ const Recents = () => {
                     </ScrollView>
 
                     </View>
+                    <View>
+                        <Image source={image} alt="" className="h-32 w-full rounded-t-md" />
+                    </View>
 
                     <View className='mt-4 flex flex-row justify-between items-center'>
                         <Text className='font-bold text-lg'>Reccomended products</Text>
