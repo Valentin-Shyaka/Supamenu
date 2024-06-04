@@ -55,7 +55,7 @@ const App = () => {
                         </View>
                         <Text className='text-center mt-2 font-bold text-slate-500'>or use <Text className='text-orange-500'>QR code</Text></Text>
                         <View className='self-center mt-4 '>
-                            <MaterialCommunityIcons name="qrcode-scan" size={50} color="black" />
+                            <MaterialCommunityIcons name="qrcode-scan" size={60} color="black" />
                         </View>
                         <View className='px-4 py-2 bg-slate-300 rounded-lg mt-4  flex flex-row justify-between' >
                                 <Text className='font-bold text-lg'>Total</Text>
