@@ -12,11 +12,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useRef,useState } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import AppServices from '../../services'
    
 
 const Recents = () => {
     const drawer = useRef<DrawerLayoutAndroid>(null);
+    const user= AppServices.getCurrentUser()
+
+   
 
     const navigationView = () => (
         <View >
@@ -47,7 +50,7 @@ const Recents = () => {
 
                     <View className=' h-20  flex justify-between flex-row items-center'>
                         <FontAwesome6 name="bars-staggered" size={24} color="black" onPress={() =>drawer.current?.openDrawer()} />
-                        <Text className='font-bold text-lg'>Hello <Text className='font-light text-orange-600'>@Lantern</Text> </Text>
+                        <Text className='font-bold text-lg'>Hello <Text className='font-light text-orange-600'>@{ "@lantern"}</Text> </Text>
                         <FontAwesome5 name="user-circle" size={32} color="black" />
 
                     </View>
