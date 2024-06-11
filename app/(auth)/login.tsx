@@ -76,6 +76,7 @@ const Login = () => {
             <TextInput className=''
               placeholder='Email'
               onChangeText={handleChange('email')}
+              keyboardType='email-address'
               onBlur={handleBlur('email')}
               value={values.email}
             ></TextInput>
@@ -90,6 +91,7 @@ const Login = () => {
             <TextInput className=''
               placeholder='Password'
               secureTextEntry={true}
+              type={'password'}
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
@@ -123,7 +125,7 @@ const Login = () => {
             <Text className='text-slate text-center font-bold ml-10'>Log In with Facebook</Text>
         </View>
 
-        <Text className='text-slate-400 text-center mt-2'>Don't have an account? <Text className='font-bold text-[#e38a3d]'>Register</Text></Text>
+        <Text className='text-slate-400 text-center mt-2'>Don't have an account? <Link href={'/signup'}><Text className='font-bold text-[#e38a3d]'>Register</Text></Link></Text>
       </View>
     </SafeAreaView>
   )

@@ -1,4 +1,5 @@
 import {Text,Button,SafeAreaView,ScrollView,DrawerLayoutAndroid,View, TextInput, Pressable} from "react-native"
+import { useEffect } from "react";
 import { Link } from "expo-router"
 import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -12,45 +13,44 @@ import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useRef,useState } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import AppServices from '../../services'
+import { loadUser} from '../../store/modules/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {store} from '../../store'
+
+
    
 
 const Recents = () => {
-    const drawer = useRef<DrawerLayoutAndroid>(null);
-    const user= AppServices.getCurrentUser()
+    
+    const [user, setUser] = useState(store.getState().auth.user);
 
-   
+    useEffect(() => {
+        const unsubscribe = store.subscribe(() => {
+        setUser(store.getState().auth.user);
+        });
 
-    const navigationView = () => (
-        <View >
-          <Text >I'm in the Drawer!</Text>
-          <Button
-            title="Close drawer"
-            onPress={() => drawer.current?.closeDrawer()}
-          />
-        </View>
-    )
+        store.dispatch(loadUser());
+
+        return () => {
+        unsubscribe();
+        };
+    }, []);
+
+    console.log(user)
+
     return (
+       
         <SafeAreaView className=''>
             <ScrollView>
             
 
                 <View className='w-screen p-4  bg-[#ffffff]'>
 
-                <DrawerLayoutAndroid
-                    ref={drawer}
-                    drawerWidth={300}
-                   
-                    drawerBackgroundColor={'black'}
-                    drawerPosition={'left'}
-                    renderNavigationView={navigationView}
-                    >
-                
-                </DrawerLayoutAndroid>
+            
 
                     <View className=' h-20  flex justify-between flex-row items-center'>
-                        <FontAwesome6 name="bars-staggered" size={24} color="black" onPress={() =>drawer.current?.openDrawer()} />
-                        <Text className='font-bold text-lg'>Hello <Text className='font-light text-orange-600'>@{ "@lantern"}</Text> </Text>
+                        <FontAwesome6 name="bars-staggered" size={24} color="black"  />
+                        <Text className='font-bold text-lg'>Hello <Text className='font-light text-orange-600'>{user ? user.name : 'Guest'}</Text> </Text>
                         <FontAwesome5 name="user-circle" size={32} color="black" />
 
                     </View>

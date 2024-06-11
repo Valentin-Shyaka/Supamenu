@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = "http://10.5.222.106:8001/api";
+export const API_URL = "http://10.5.223.215:8001/api";
 
 
 class AppServices {

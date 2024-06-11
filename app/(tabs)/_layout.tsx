@@ -2,7 +2,7 @@ import { Tabs } from "expo-router";
 import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 const TabsLayout = () => {
   return (
@@ -18,8 +18,8 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => (
               <View className="items-center justify-center gap-22">
-                <FontAwesome
-                  name="bell-o"
+                <FontAwesome5
+                  name="hamburger"
                   size={23}
                   color={focused ? "#f7941d" : "#484848"}
                 />
